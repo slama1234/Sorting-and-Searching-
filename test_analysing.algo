@@ -1,0 +1,26 @@
+ALGORITHM Insertion_sort
+VAR
+    var i,j,key,sizeArray:INTEGER
+    tab: ARRAY_OF INTEGER
+BEGIN
+    write("please enter the size for the array");
+    read(sizeArray);
+
+   FOR i FROM 0 TO sizeArray STEP 1  DO
+		Write("Please enter items");
+		Read(tab[i]);
+	END_FOR
+
+    FOR i FROM 1 TO tab.lentgh-1 STEP 1  DO
+	    key:=tab[i]
+	    j:=i-1
+	    WHILE (tab[j]>key and j>=0) DO
+		  tab[j+1]=tab[j]
+		  j--
+	    END_WHILE
+	    tab[j+1]=key
+	END_FOR
+
+    Write("new Array"");
+	Read(tab);
+END
